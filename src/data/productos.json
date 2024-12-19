@@ -1,0 +1,123 @@
+[
+    {
+      "code": "1",
+      "title": "Conjunto deportivo Kelme",
+      "price": 6500,
+      "category": "hombres",
+      "thumbnails": [],
+      "stock": 11,
+      "description": "Campera y pantalon deportivo marca Kelme para hombre.",
+      "status": true
+    },
+    {
+      "code": "2",
+      "title": "Championes New Ballance",
+      "price": 3800,
+      "category": "hombres",
+      "thumbnails": [],
+      "stock": 16,
+      "description": "Calzado deportivo de hombres New Ballance.",
+      "status": true
+    },
+    {
+      "code": "3",
+      "title": "Remera deportiva Adcodeas",
+      "price": 2200,
+      "category": "hombres",
+      "thumbnails": [],
+      "stock": 33,
+      "description": "Remera deportiva de hombre marca Adcodeas.",
+      "status": true
+    },
+    {
+      "code": "4",
+      "title": "Calza deportiva Adcodeas",
+      "price": 2000,
+      "category": "damas",
+      "thumbnails": [],
+      "stock": 6,
+      "description": "Calza deportiva Adcodeas para dama.",
+      "status": true
+    },
+    {
+      "code": "5",
+      "title": "Campera deportiva Kelme",
+      "price": 2900,
+      "category": "damas",
+      "thumbnails": [],
+      "stock": 8,
+      "description": "Campera de dama deportiva marca Kelme.",
+      "status": true
+    },
+    {
+      "code": "6",
+      "title": "Championes deportivos Puma",
+      "price": 5600,
+      "category": "damas",
+      "thumbnails": [],
+      "stock": 6,
+      "description": "Championes de dama marca Puma deportivos.",
+      "status": true
+    },
+    {
+      "code": "7",
+      "title": "Pijama de monstruo infantil",
+      "price": 3100,
+      "category": "niños",
+      "thumbnails": [],
+      "stock": 11,
+      "description": "Pijama para niños varias colores y diseños.",
+      "status": true
+    },
+    {
+      "code": "8",
+      "title": "Short deportivo niño Head",
+      "price": 1500,
+      "category": "niños",
+      "thumbnails": [],
+      "stock": 9,
+      "description": "Short Head para niños.",
+      "status": true
+    },
+    {
+      "code": "9",
+      "title": "Championes de basquetball",
+      "price": 3300,
+      "category": "niños",
+      "thumbnails": [],
+      "stock": 7,
+      "description": "calzado de basquetball para niños.",
+      "status": true
+    },
+    {
+      "code": "10",
+      "title": "Pelota Adcodeas mundial 2022",
+      "price": 1200,
+      "category": "deportes",
+      "thumbnails": [],
+      "stock": 40,
+      "description": "Balon de futbol Adcodeas.",
+      "status": true
+    },
+    {
+      "code": "11",
+      "title": "Red de futbol-tenis",
+      "price": 900,
+      "category": "deportes",
+      "thumbnails": [],
+      "stock": 21,
+      "description": "red de futbol tenis para espacios abiertos.",
+      "status": true
+    },
+    {
+      "code": "12",
+      "title": "Raqueta de tennis Head",
+      "price": 4200,
+      "category": "deportes",
+      "thumbnails": [],
+      "stock": 9,
+      "description": "Raqueta de tennis Head",
+      "status": true
+    }
+  ]
+
