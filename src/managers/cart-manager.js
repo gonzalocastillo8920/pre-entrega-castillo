@@ -22,6 +22,11 @@ class CartManager {
         }
     };
 
+    async mostrarCarritos() {
+        const arraycarritos = await this.leerArchivo();
+        return arraycarritos;
+    }
+
     async guardarCarritos() {
         await fs.writeFile(this.path, JSON.stringify(this.carts, null, 2));
     };
@@ -60,6 +65,16 @@ class CartManager {
         await this.guardarCarritos();
         return carrito;
     };
+
+    async leerArchivo() {
+        try {
+            const respuesta = await fs.readFile(this.path, "utf-8");
+            const arrayCarritos = JSON.parse(respuesta);
+            return arrayCarritos;
+        } catch (error) {
+            console.log("No se puede leer el archivo de los carritos.");
+        }
+    }
 };
 
 export default CartManager;

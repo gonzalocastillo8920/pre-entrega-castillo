@@ -1,7 +1,13 @@
 import { Router } from "express";
-import CartManager from "../managers/cart-manager.js";
 const carritoRouter = Router();
+
+import CartManager from "../managers/cart-manager.js";
 const manager = new CartManager("./src/data/carts.json");
+
+carritoRouter.get("/", async (req, res) => {
+    const carritos = await manager.mostrarCarritos();
+    res.send(carritos);
+});
 
 // crear nuevo carrito:
 carritoRouter.post("/", async (req, res) => {
@@ -9,7 +15,7 @@ carritoRouter.post("/", async (req, res) => {
         const nuevoCarrito = await manager.crearCarrito();
         res.json(nuevoCarrito);
     } catch (error) {
-        res.status(500).json({error: "Error al intentar crear un carrito."});
+        res.status(500).json({ error: "Error al intentar crear un carrito." });
     };
 });
 
@@ -21,7 +27,7 @@ carritoRouter.get("/:cid", async (req, res) => {
         const carritoBuscado = await manager.getCarritoById(cartId);
         res.json(carritoBuscado.products);
     } catch (error) {
-        res.status(500).json({error: "Error en busqueda del carrito solicitado."});
+        res.status(500).json({ error: "Error en busqueda del carrito solicitado." });
     };
 });
 
@@ -35,7 +41,7 @@ carritoRouter.post("/:cid/product/:pid", async (req, res) => {
         const actualizarCarrito = await manager.agregarProductoAlCarrito(cartId, productId, quantity);
         res.json(actualizarCarrito.products);
     } catch (error) {
-        res.status(500).json({error: "No se pudo agregar al carrito, verifique."});
+        res.status(500).json({ error: "No se pudo agregar al carrito, verifique." });
     };
 });
 

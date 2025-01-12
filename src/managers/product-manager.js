@@ -7,7 +7,7 @@ class ProductManager {
         this.path = path;
     };
 
-    async addProduct({ code, title, price, category, thumbnails, stock, description, status }) {
+    async addProduct({ code, title, price, category, thumbnails=[], stock, description, status=true }) {
 
         const arrayProductos = await this.leerArchivo();
 
@@ -48,6 +48,31 @@ class ProductManager {
             return "Producto no encontrado!";
         } else {
             return producto;
+        }
+    }
+
+    async agregarProducto() {
+        const arrayProductos = await this.leerArchivo();
+        const { code, title, price, category, thumbnails = [], stock, description, status= true } = runInNewContext.body;
+        if (!code || !title || !description || !price || !stock || !category){
+            console.log("Todos los campos son obligatorios!!");
+            return;
+        } else {
+            const nuevoProducto = {
+                id: ++ProductManager.ultId,
+                code,
+                title,
+                price,
+                category,
+                thumbnails,
+                stock,
+                description,
+                status
+            };
+            arrayProductos.push(nuevoProducto);
+            guardarArchivo(arrayProductos);
+            console.log("producto agregado satisfctoriamente!");
+            
         }
     }
 
